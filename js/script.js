@@ -17,45 +17,58 @@
 // Buon lavoro!
 
 const ourTeam = [
+    
     {
 
       nome: "Wayne Barnett",
       ruolo: "Founder & CEO",
       foto: "wayne-barnett-founder-ceo.jpg"
+      
     },
+
     {
         nome: "Angela Caroll",
         ruolo: "Chief Editor",
         foto: "angela-caroll-chief-editor.jpg"
     },
+
     {
         nome: "Walter Gordon",
         ruolo: "Office Manager",
         foto: "walter-gordon-office-manager.jpg"
     },
+
     {
         nome: "Angela Lopez",
         ruolo: "Social Media Manager",
         foto: "angela-lopez-social-media-manager.jpg"
     },
+
     {
         nome: "Scott Estrada",
         ruolo: "Developer",
         foto: "scott-estrada-developer.jpg"
     },
+
     {
         nome: "Barbara Ramos",
         ruolo: "Graphic Designer",
         foto: "barbara-ramos-graphic-designer.jpg"
+        
     },
 
+   
 ]
-for (const key in ourTeam) {
 
-    const element = ourTeam[key];
+let userInfos = "";
 
-    console.log(ourTeam[key]);
+for (let i = 0; i < ourTeam.length; i++) {
+    userInfos = ourTeam[i];
+    console.log(userInfos.nome, userInfos.ruolo, userInfos.foto);
+    
+    
+    const domElement = document.querySelector("div");
+
+    
+    domElement.innerHTML += `Nome: ${userInfos.nome}<br><br>Lavoro: ${userInfos.ruolo}<br><br><img src = "img/${userInfos.foto}"><br><br>`;
 }
-
-let result = JSON.stringify(ourTeam);
-document.body.append(result);
