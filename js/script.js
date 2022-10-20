@@ -56,3 +56,6 @@ for (const key in ourTeam) {
 
     console.log(ourTeam[key]);
 }
+
+let result = JSON.stringify(ourTeam);
+document.body.append(result);
